@@ -1,3 +1,0 @@
-[submodule "vault-plugin-auth-google"]
-	path = vault-plugin-auth-google
-	url = git@github.com:jetstack/vault-plugin-auth-google.git
