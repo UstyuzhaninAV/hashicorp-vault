@@ -11,8 +11,7 @@ listener "tcp" {
 storage "s3" {
     access_key = "****"
     secret_key = "****"
-    bucket     = "secrets-vault"
-    kms_key_id = "****"
+    bucket     = "****"
     region     = "eu-west-1"
 }
 entropy "seal" {

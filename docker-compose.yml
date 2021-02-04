@@ -1,16 +1,17 @@
 version: '2'
 services:
   vault:
-#    image: vault
-    image: ustiuzhanin:vault-with-google-plugin
+    image: vault
+    #image: ustiuzhanin:vault-with-google-plugin
     container_name: vault
     ports:
       - "8200:8200"
     restart: always
     volumes:
       - ./volumes/logs:/vault/logs
-#      - ./volumes/file:/vault/file
+      #- ./volumes/file:/vault/file
       - ./volumes/config:/vault/config
     cap_add:
       - IPC_LOCK
-    entrypoint: vault server -config=/vault/config/vault.hcl -path="google" -plugin-name="google-auth-vault-plugin" plugin
+    entrypoint: vault server -config=/vault/config/vault.hcl
+    #auth-enable -path="google" -plugin-name="google-auth-vault-plugin" plugin
